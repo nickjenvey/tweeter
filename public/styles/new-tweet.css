@@ -17,7 +17,7 @@
     justify-content: space-between;
 }
 
-.new-tweet form textarea {
+.new-tweet .new-tweet__textarea {
     flex: 1 0 100%;
     margin-bottom: 10px;
     padding: 10px;
