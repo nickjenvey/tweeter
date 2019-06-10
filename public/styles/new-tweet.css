@@ -26,3 +26,7 @@
 .new-tweet .counter {
   font-style: italic;
 }
+
+.new-tweet .counter--negative {
+  color: #ff0000;
+}

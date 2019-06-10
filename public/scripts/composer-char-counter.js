@@ -5,9 +5,9 @@ $(document).ready(function() {
     let remaining = maxChars - currentChars;
     $(this).parent().find(".counter").text(remaining);
     if (currentChars > maxChars) {
-    $(this).parent().find(".counter").css("color", "red");
+      $(this).parent().find(".counter").addClass("counter--negative");
     } else {
-    $(this).parent().find(".counter").css("color", "#244751");
+      $(this).parent().find(".counter").removeClass("counter--negative");
     }
   });
 });
