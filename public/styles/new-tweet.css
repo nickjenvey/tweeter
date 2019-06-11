@@ -1,12 +1,13 @@
 .new-tweet {
-  background-color: #eee;
+  background-color: #eaeaea;
   border-radius: 6px;
-  border: 1px solid #ccc;
+  border: 1px solid #c1c1c1;
   padding: 10px;
+  margin-bottom: 10px;
 }
 
 .new-tweet h2 {
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #1d1d1d;
   margin-top: 0;
   margin-bottom: 20px;
 }

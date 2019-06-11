@@ -1,0 +1,79 @@
+article.tweet {
+  border-radius: 6px;
+  border: 1px solid #c1c1c1;
+}
+
+article.tweet:hover header, article.tweet:hover .tweet__media-controls {
+  opacity: 1;
+}
+
+article.tweet header {
+  background-color: #eee;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 10px;
+  opacity: .75;
+  transition: opacity .5s;
+}
+
+article.tweet h2 {
+  margin-left: 10px;
+}
+
+article.tweet h4 {
+  margin-left: auto;
+  font-weight: 300;
+  color: #777;
+}
+
+article.tweet header .tweet__avatar {
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  background-image: url("../images/default-avatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+article.tweet section {
+  padding: 20px;
+}
+
+article.tweet footer {
+  border-top: 1px solid #c1c1c1;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article.tweet footer h6 {
+  margin: 0;
+  font-weight: 300;
+}
+
+article.tweet footer .tweet__media-controls {
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+article.tweet footer a.icon {
+  margin: 0 0 0 10px;
+  width: 16px;
+  height: 16px;
+  transition: all .5s;
+}
+
+article.tweet footer a.icon:hover {
+  transform: scale(1.25);
+}
+
+.flag, .retweet, .heart {
+  fill: #60c7b8;
+}
