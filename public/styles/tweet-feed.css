@@ -1,6 +1,12 @@
 article.tweet {
   border-radius: 6px;
   border: 1px solid #c1c1c1;
+  transition: border .5s;
+  margin-bottom: 10px;
+}
+
+article.tweet:hover {
+  border-color: #656565;
 }
 
 article.tweet:hover header, article.tweet:hover .tweet__media-controls {
@@ -76,4 +82,16 @@ article.tweet footer a.icon:hover {
 
 .flag, .retweet, .heart {
   fill: #60c7b8;
+}
+
+article.tweet footer a.icon:hover .flag {
+  fill: #ee9a08;
+}
+
+article.tweet footer a.icon:hover .retweet {
+  fill: #05f8de;
+}
+
+article.tweet footer a.icon:hover .heart {
+  fill: #d52b2b;
 }
