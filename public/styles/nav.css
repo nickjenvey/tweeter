@@ -4,11 +4,12 @@
   left: 0;
   right: 0;
   height: 80px;
-  background-color: #00a087;
+  background-color: #0094df;
   color: #e8fdff;
   padding: 0 2em;
   display: flex;
   align-items: center;
+  z-index: 100;
 }
 
 #nav-bar .logo {

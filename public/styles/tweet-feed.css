@@ -81,17 +81,17 @@ article.tweet footer a.icon:hover {
 }
 
 .flag, .retweet, .heart {
-  fill: #60c7b8;
+  fill: #0094df;
 }
 
 article.tweet footer a.icon:hover .flag {
-  fill: #ee9a08;
+  fill: #ffa900;
 }
 
 article.tweet footer a.icon:hover .retweet {
-  fill: #05f8de;
+  fill: #7c48b0;
 }
 
 article.tweet footer a.icon:hover .heart {
-  fill: #d52b2b;
+  fill: #cf002a;
 }
