@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".new-tweet__textarea").on("input", function() {
+  $(".new-tweet__textarea").keyup(function() {
     let currentChars = $(this).val().length;
     let remaining = 140 - currentChars;
     $(this).parent().find(".counter").text(remaining);
