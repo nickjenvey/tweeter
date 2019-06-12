@@ -21,3 +21,37 @@
   font-size: 32px;
   margin-left: 10px;
 }
+
+#nav-bar #compose-btn {
+  margin-left: auto;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background .5s, color .5s, transform .5s;
+}
+
+#nav-bar #compose-btn:hover {
+  background-color: #fff;
+  color: #0094df;
+  transform: scale(1.1);
+}
+
+#nav-bar #compose-btn .icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#nav-bar #compose-btn .icon .compose {
+  fill: #fff;
+  transition: fill .5s;
+}
+
+#nav-bar #compose-btn:hover .icon .compose {
+  fill: #0094df;
+}

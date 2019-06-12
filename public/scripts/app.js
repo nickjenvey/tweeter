@@ -4,60 +4,35 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": {
-        "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
-        "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
-        "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
-      },
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": {
-        "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
-        "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
-        "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
-      },
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  },
-  {
-    "user": {
-      "name": "Johann von Goethe",
-      "avatars": {
-        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
-        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
-        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
-      },
-      "handle": "@johann49"
-    },
-    "content": {
-      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
-    },
-    "created_at": 1461113796368
-  }
-];
-
 $(document).ready(function() {
+
+  $("#new-tweet__form").submit(function(e) {
+    e.preventDefault();
+    const tweetText = $(this).serialize();
+    if (tweetText.slice(5) === "") {
+      alert("Guess you've got nothing on your mind...");
+    } else if (tweetText.slice(5).length > 140) {
+      alert("This is tweeter not your diary... too many words!")
+    } else {
+      $.post("/tweets", tweetText, (tweet) => {
+        $("#tweet-container").prepend(createTweetElement(tweet));
+      });
+      $(".new-tweet__textarea").val('');
+    }
+  });
+
+  const loadTweets = () => {
+    $.getJSON("/tweets", (tweet) => {
+      renderTweets(tweet);
+    });
+  };
+
   const renderTweets = (tweets) => {
     let tweetArr = []
     for (const key in tweets) {
       tweetArr.push(createTweetElement(tweets[key]));
     }
-    $("#tweet-container").append(tweetArr);
+    $("#tweet-container").append(tweetArr.reverse());
   };
 
   const timeDifference = (current, previous) => {
@@ -68,17 +43,17 @@ $(document).ready(function() {
     const msPerYear = msPerDay * 365;
     const elapsed = current - previous;
     if (elapsed < msPerMinute) {
-      return Math.round(elapsed / 1000) + ' seconds ago...';
+      return Math.round(elapsed / 1000) + ' seconds ago';
     } else if (elapsed < msPerHour) {
-      return Math.round(elapsed / msPerMinute) + ' minutes ago...';
+      return Math.round(elapsed / msPerMinute) + ' minutes ago';
     } else if (elapsed < msPerDay ) {
-      return Math.round(elapsed / msPerHour ) + ' hours ago...';
+      return Math.round(elapsed / msPerHour ) + ' hours ago';
     } else if (elapsed < msPerMonth) {
-      return Math.round(elapsed / msPerDay) + ' days ago...';
+      return Math.round(elapsed / msPerDay) + ' days ago';
     } else if (elapsed < msPerYear) {
-      return Math.round(elapsed / msPerMonth) + ' months ago...';
+      return Math.round(elapsed / msPerMonth) + ' months ago';
     } else {
-      return Math.round(elapsed / msPerYear ) + ' years ago...';
+      return Math.round(elapsed / msPerYear ) + ' years ago';
     }
   };
 
@@ -100,5 +75,11 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  renderTweets(data);
+  loadTweets();
+
+  $("#compose-btn").click((e) => {
+    $(".new-tweet").slideToggle();
+    $(".new-tweet__textarea").focus();
+  });
+
 });
