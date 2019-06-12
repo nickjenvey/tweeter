@@ -6,18 +6,28 @@
 
 $(document).ready(function() {
 
+  // Reusable variables
+  const $tweetContainer = $("#tweet-container");
+  const $tweetForm = $(".new-tweet");
+  const $tweetTextArea = $(".new-tweet__textarea");
+  const $errEmptyForm = $(".error--blank-form");
+  const $errTooLong = $(".error--too-long");
+
+  // Function that happens when you hit submit on the tweet form
   $("#new-tweet__form").submit(function(e) {
     e.preventDefault();
     const tweetText = $(this).serialize();
     if (tweetText.slice(5) === "") {
-      alert("Guess you've got nothing on your mind...");
+      $errEmptyForm.slideDown();
     } else if (tweetText.slice(5).length > 140) {
-      alert("This is tweeter not your diary... too many words!")
+      $errTooLong.slideDown();
     } else {
       $.post("/tweets", tweetText, (tweet) => {
-        $("#tweet-container").prepend(createTweetElement(tweet));
+        $tweetContainer.prepend(createTweetElement(tweet));
+        $tweetTextArea.val('');
+        $errEmptyForm.slideUp();
+        $errTooLong.slideUp();
       });
-      $(".new-tweet__textarea").val('');
     }
   });
 
@@ -32,7 +42,7 @@ $(document).ready(function() {
     for (const key in tweets) {
       tweetArr.push(createTweetElement(tweets[key]));
     }
-    $("#tweet-container").append(tweetArr.reverse());
+    $tweetContainer.append(tweetArr.reverse());
   };
 
   const timeDifference = (current, previous) => {
@@ -75,11 +85,13 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  loadTweets();
-
+  // Form toggle button
   $("#compose-btn").click((e) => {
-    $(".new-tweet").slideToggle();
-    $(".new-tweet__textarea").focus();
+    $tweetForm.slideToggle(() => {
+      $tweetTextArea.focus();
+    });
   });
+
+  loadTweets();
 
 });

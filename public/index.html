@@ -7,8 +7,8 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- Google Fonts - Roboto Condensed 300 + 700 -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Roboto Condensed 300+700 + Roboto Mono 300 -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700|Roboto+Mono:300&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -35,6 +35,12 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+      <article class="error error--blank-form">
+        <p>Guess you've got nothing on your mind...<br><span class="err">Empty tweet!</span></p>
+      </article>
+      <article class="error error--too-long">
+        <p>This is tweeter not your diary...<br><span class="err">Word overload!</span></p>
+      </article>
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="new-tweet__form">

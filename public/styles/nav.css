@@ -40,7 +40,7 @@
   transform: scale(1.1);
 }
 
-#nav-bar #compose-btn:active {
+#nav-bar #compose-btn:active, #nav-bar #compose-btn:focus {
   outline: 0;
 }
 

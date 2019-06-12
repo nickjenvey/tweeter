@@ -31,3 +31,30 @@ body {
   background-color: #fff;
   padding: 3em 2em;
 }
+
+.container .error {
+  border-radius: 6px;
+  text-align: center;
+  border-width: 1px;
+  border-style: solid;
+  margin-bottom: 10px;
+}
+
+.container .error .err {
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 2px;
+}
+
+.container .error--blank-form {
+  border-color: #cf002a;
+  background-color: rgba(207,0,42,0.15);
+  color: #cf002a;
+  display: none;
+}
+
+.container .error--too-long {
+  border-color: #ffa900;
+  background-color: rgba(255,169,0,0.15);
+  color: #ffa900;
+  display: none;
+}
