@@ -81,7 +81,7 @@ article.tweet footer a.icon:hover {
 }
 
 .flag, .retweet, .heart {
-  fill: #0094df;
+  fill: #00a087;
 }
 
 article.tweet footer a.icon:hover .flag {

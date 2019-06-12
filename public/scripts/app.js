@@ -86,7 +86,7 @@ $(document).ready(function() {
   };
 
   // Form toggle button
-  $("#compose-btn").click((e) => {
+  $("#compose-btn").click(() => {
     $tweetForm.slideToggle(() => {
       $tweetTextArea.focus();
     });

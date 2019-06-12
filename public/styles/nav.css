@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   height: 80px;
-  background-color: #0094df;
+  background-color: #00a087;
   color: #e8fdff;
   padding: 0 2em;
   display: flex;
@@ -36,7 +36,7 @@
 
 #nav-bar #compose-btn:hover {
   background-color: #fff;
-  color: #0094df;
+  color: #00a087;
   transform: scale(1.1);
 }
 
@@ -57,5 +57,5 @@
 }
 
 #nav-bar #compose-btn:hover .icon .compose {
-  fill: #0094df;
+  fill: #00a087;
 }
