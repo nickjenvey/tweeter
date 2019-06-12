@@ -1,27 +1,46 @@
 article.tweet {
   border-radius: 6px;
-  border: 1px solid #c1c1c1;
-  transition: border .5s;
+  border: 2px solid #525365;
+  transition: all .5s;
   margin-bottom: 10px;
 }
 
 article.tweet:hover {
-  border-color: #656565;
+  border-color: #fff;
 }
 
-article.tweet:hover header, article.tweet:hover .tweet__media-controls {
+article.tweet:hover header {
+  background-color: #fff;
+}
+
+article.tweet:hover header h2, article.tweet:hover header h4 {
+  color: #1b1e32;
+}
+
+article.tweet:hover section p {
+  color: #fff;
+}
+
+article.tweet:hover footer {
+  border-top: 2px solid #fff;
+}
+
+article.tweet:hover footer .tweet__media-controls {
   opacity: 1;
 }
 
+article.tweet:hover footer h6 {
+  color: #fff;
+}
+
 article.tweet header {
-  background-color: #eee;
-  border-radius: 6px 6px 0 0;
+  background-color: #525365;
+  border-radius: 4px 4px 0 0;
   display: flex;
   align-items: center;
   height: 80px;
   padding: 0 10px;
-  opacity: .75;
-  transition: opacity .5s;
+  transition: background-color .5s;
 }
 
 article.tweet h2 {
@@ -31,7 +50,6 @@ article.tweet h2 {
 article.tweet h4 {
   margin-left: auto;
   font-weight: 300;
-  color: #777;
 }
 
 article.tweet header .tweet__avatar {
@@ -51,19 +69,22 @@ article.tweet section {
 
 article.tweet section p {
   overflow-wrap: break-word;
+  transition: color .5s;
 }
 
 article.tweet footer {
-  border-top: 1px solid #c1c1c1;
+  border-top: 2px solid #525365;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: border .5s;
 }
 
 article.tweet footer h6 {
   margin: 0;
   font-weight: 300;
+  transition: color .5s;
 }
 
 article.tweet footer .tweet__media-controls {
@@ -85,7 +106,7 @@ article.tweet footer a.icon:hover {
 }
 
 .flag, .retweet, .heart {
-  fill: #00a087;
+  fill: #00ffff;
 }
 
 article.tweet footer a.icon:hover .flag {

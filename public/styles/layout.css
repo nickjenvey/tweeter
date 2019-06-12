@@ -16,9 +16,9 @@ html {
 
 body {
   margin: 0;
-  color: #244751;
-  background-color: #eee;
-  font-family: 'Roboto Condensed', sans-serif;
+  color: #86879c;
+  background-color: #292d3e;
+  font-family: 'Raleway', sans-serif;
 }
 
 /*
@@ -28,7 +28,7 @@ body {
 .container {
   width: 450px;
   margin: 80px auto 0;
-  background-color: #fff;
+  background-color: #3c3d51;
   padding: 3em 2em;
 }
 

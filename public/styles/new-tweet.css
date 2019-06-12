@@ -1,15 +1,16 @@
 .new-tweet {
-  background-color: #eaeaea;
+  background-color: #1b1e32;
   border-radius: 6px;
-  border: 1px solid #c1c1c1;
+  border: 2px solid #525365;
   padding: 10px;
   margin-bottom: 10px;
 }
 
 .new-tweet h2 {
-  border-bottom: 1px solid #1d1d1d;
   margin-top: 0;
   margin-bottom: 20px;
+  color: #e3e3e3;
+  text-transform: lowercase;
 }
 
 .new-tweet form {
@@ -22,10 +23,32 @@
   flex: 1 0 100%;
   margin-bottom: 10px;
   padding: 10px;
+  border-radius: 6px;
+}
+
+.new-tweet input[type=submit] {
+  border-radius: 6px;
+  font-size: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  background: transparent;
+  padding: 5px 10px;
+  transition: all .5s;
+  transition: background .5s, color .5s, transform .5s;
+}
+
+.new-tweet input[type=submit]:hover {
+  background: #fff;
+  color: #fc03ff;
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .new-tweet .counter {
-  font-style: italic;
+  font-size: 14px;
+  font-family: 'Roboto Mono', monospace;
+  letter-spacing: 1px;
 }
 
 .new-tweet .counter--negative {

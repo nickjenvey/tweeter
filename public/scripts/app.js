@@ -19,8 +19,10 @@ $(document).ready(function() {
     const tweetText = $(this).serialize();
     if (tweetText.slice(5) === "") {
       $errEmptyForm.slideDown();
+      $errTooLong.slideUp();
     } else if (tweetText.slice(5).length > 140) {
       $errTooLong.slideDown();
+      $errEmptyForm.slideUp();
     } else {
       $.post("/tweets", tweetText, (tweet) => {
         $tweetContainer.prepend(createTweetElement(tweet));

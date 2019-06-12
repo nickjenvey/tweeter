@@ -4,8 +4,8 @@
   left: 0;
   right: 0;
   height: 80px;
-  background-color: #00a087;
-  color: #e8fdff;
+  background-color: #1b1e32;
+  color: #e3e3e3;
   padding: 0 2em;
   display: flex;
   align-items: center;
@@ -20,6 +20,7 @@
 #nav-bar .header {
   font-size: 32px;
   margin-left: 10px;
+  text-transform: lowercase;
 }
 
 #nav-bar #compose-btn {
@@ -31,13 +32,17 @@
   color: #fff;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background .5s, color .5s, transform .5s;
+  transition: all .5s;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 #nav-bar #compose-btn:hover {
   background-color: #fff;
-  color: #00a087;
+  color: #fc03ff;
   transform: scale(1.1);
+  -webkit-box-shadow: 0 6px 5px 5px rgba(0,0,0,.25);
+  box-shadow: 0 6px 5px 5px rgba(0,0,0,.25);
 }
 
 #nav-bar #compose-btn:active, #nav-bar #compose-btn:focus {
@@ -45,8 +50,8 @@
 }
 
 #nav-bar #compose-btn .icon {
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   display: inline-block;
   margin-right: 10px;
 }
@@ -57,5 +62,5 @@
 }
 
 #nav-bar #compose-btn:hover .icon .compose {
-  fill: #00a087;
+  fill: #fc03ff;
 }
