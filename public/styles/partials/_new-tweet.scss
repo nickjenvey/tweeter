@@ -62,6 +62,15 @@
   }
 }
 
+
+//            _      _                   
+//           (_)    | |                  
+// _ __ __ _ _ _ __ | |__   _____      __
+// | '__/ _` | | '_ \| '_ \ / _ \ \ /\ / /
+// | | | (_| | | | | | |_) | (_) \ V  V / 
+// |_|  \__,_|_|_| |_|_.__/ \___/ \_/\_/     
+
+// Rainbow Animation 
 @-webkit-keyframes rainbow {
   0%{background-position:0% 82%}
   50%{background-position:100% 19%}
@@ -82,9 +91,3 @@
   50%{background-position:100% 19%}
   100%{background-position:0% 82%}
 }
-
-// background: $gradient-1;
-//   background: -moz-linear-gradient(45deg,  $gradient-1 0%, $gradient-2 100%);
-//   background: -webkit-linear-gradient(45deg,  $gradient-1 0%,$gradient-2 100%);
-//   background: linear-gradient(45deg,  $gradient-1 0%,$gradient-2 100%);
-//   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-1', endColorstr='$gradient-2',GradientType=1 );
