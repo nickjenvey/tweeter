@@ -9,67 +9,72 @@
   }
   color: $nav-subtle;
   padding: 0 2rem;
-  display: flex;
-  align-items: center;
   z-index: 100;
   -webkit-box-shadow: 0 0 0.3125rem 0.125rem rgba(0,0,0,.25);
   box-shadow: 0 0 0.3125rem 0.125rem rgba(0,0,0,.25);
 
-  .logo {
-    width: 5rem;
-    height: 5rem;
-  }
+  section {
+    display: flex;
+    align-items: center;
+    max-width: 42.500rem;
+    margin: 0 auto;
 
-  .header {
-    font-size: 2rem;
-    margin-left: 0.625rem;
-    text-transform: lowercase;
-  }
-
-  #compose-btn {
-    margin-left: auto;
-    -webkit-appearance: none;
-    background: {
-      color: transparent;
+    .logo {
+      width: 5rem;
+      height: 5rem;
     }
-    border: 0.125rem solid $nav-subtle;
-    border-radius: 0.375rem;
-    color: $nav-subtle;
-    padding: 0.625rem 1.25rem;
-    cursor: pointer;
-    transition: all $t-time;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-
-    &:hover {
+  
+    .header {
+      font-size: 2rem;
+      margin-left: 0.625rem;
+      text-transform: lowercase;
+    }
+  
+    #compose-btn {
+      margin-left: auto;
+      -webkit-appearance: none;
       background: {
-        color: $nav-obvious;
+        color: transparent;
       }
-      border-color: $nav-obvious;
-      color: $highlight;
-      transform: scale(1.1);
-      -webkit-box-shadow: 0 0.375rem 0.3125rem 0.3125rem rgba(0,0,0,.25);
-      box-shadow: 0 0.375rem 0.3125rem 0.3125rem rgba(0,0,0,.25);
-    }
-
-    &:active, &:focus {
-      outline: 0;
-    }
-
-    &:hover .icon .compose {
-      fill: $highlight;
-    }
-
-    .icon {
-      width: 0.75rem;
-      height: 0.75rem;
-      display: inline-block;
-      margin-right: 0.625rem;
-      fill: $nav-subtle;
-      
-      .compose {
-        fill: $nav-obvious;
-        transition: fill $t-time;
+      border: 0.125rem solid $nav-subtle;
+      border-radius: 0.375rem;
+      color: $nav-subtle;
+      padding: 0.625rem 1.25rem;
+      cursor: pointer;
+      transition: all $t-time;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+  
+      &:hover {
+        background: {
+          color: $nav-obvious;
+        }
+        border-color: $nav-obvious;
+        color: $highlight;
+        transform: scale(1.1);
+        -webkit-box-shadow: 0 0.375rem 0.3125rem 0.3125rem rgba(0,0,0,.25);
+        box-shadow: 0 0.375rem 0.3125rem 0.3125rem rgba(0,0,0,.25);
+      }
+  
+      &:active, &:focus {
+        outline: 0;
+      }
+  
+      &:hover .icon .compose {
+        fill: $highlight;
+      }
+  
+      .icon {
+        width: 0.75rem;
+        height: 0.75rem;
+        display: inline-block;
+        margin-right: 0.625rem;
+        fill: $nav-subtle;
+        
+        .compose {
+          fill: $nav-obvious;
+          transition: fill $t-time;
+        }
       }
     }
   }

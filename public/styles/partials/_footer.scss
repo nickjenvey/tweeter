@@ -1,0 +1,32 @@
+footer {
+  background: {
+    color: $darkest;
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 42.500rem;
+    margin: 0 auto;
+
+    p {
+      color: $footer-obvious;
+      font: {
+        size: 0.750rem;
+        family: $err-font;
+      }
+
+      svg {
+        width: 1.250rem;
+        height: 1.250rem;
+        display: inline-block;
+        margin: 0 5px -6px 5px;
+
+        .heart {
+          fill: $heart;
+        }
+      }
+    }
+  }
+}

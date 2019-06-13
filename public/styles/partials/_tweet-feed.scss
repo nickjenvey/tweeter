@@ -81,6 +81,9 @@ article.tweet {
     justify-content: space-between;
     align-items: center;
     transition: border $t-time;
+    background: {
+      color: transparent;
+    }
 
     h6 {
       margin: 0;
