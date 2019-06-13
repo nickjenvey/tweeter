@@ -20,21 +20,21 @@ body {
 }
 
 .container {
-  width: 450px;
-  margin: 80px auto 0;
+  width: 28.125rem;
+  margin: 5rem auto 0;
   background-color: #3c3d51;
-  padding: 3em 2em;
+  padding: 3rem 2rem;
 }
 .container .error {
-  border-radius: 6px;
+  border-radius: 0.375rem;
   text-align: center;
-  border-width: 2px;
+  border-width: 0.125rem;
   border-style: solid;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .container .error .err {
   font-family: "Roboto Mono", monospace;
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
 }
 .container .error.error--blank-form {
   border-color: #cf002a;
@@ -54,45 +54,45 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 5rem;
   background-color: #1b1e32;
   color: #e3e3e3;
-  padding: 0 2em;
+  padding: 0 2rem;
   display: flex;
   align-items: center;
   z-index: 100;
-  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0 0.3125rem 0.125rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0.3125rem 0.125rem rgba(0, 0, 0, 0.25);
 }
 #nav-bar .logo {
-  width: 80px;
-  height: 80px;
+  width: 5rem;
+  height: 5rem;
 }
 #nav-bar .header {
-  font-size: 32px;
-  margin-left: 10px;
+  font-size: 2rem;
+  margin-left: 0.625rem;
   text-transform: lowercase;
 }
 #nav-bar #compose-btn {
   margin-left: auto;
   -webkit-appearance: none;
   background-color: transparent;
-  border: 2px solid #e3e3e3;
-  border-radius: 6px;
+  border: 0.125rem solid #e3e3e3;
+  border-radius: 0.375rem;
   color: #e3e3e3;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   cursor: pointer;
   transition: all 0.5s;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 #nav-bar #compose-btn:hover {
   background-color: #fff;
   border-color: #fff;
   color: #fc03ff;
   transform: scale(1.1);
-  -webkit-box-shadow: 0 6px 5px 5px rgba(0, 0, 0, 0.25);
-  box-shadow: 0 6px 5px 5px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0.375rem 0.3125rem 0.3125rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.375rem 0.3125rem 0.3125rem rgba(0, 0, 0, 0.25);
 }
 #nav-bar #compose-btn:active, #nav-bar #compose-btn:focus {
   outline: 0;
@@ -101,10 +101,10 @@ body {
   fill: #fc03ff;
 }
 #nav-bar #compose-btn .icon {
-  width: 12px;
-  height: 12px;
+  width: 0.75rem;
+  height: 0.75rem;
   display: inline-block;
-  margin-right: 10px;
+  margin-right: 0.625rem;
   fill: #e3e3e3;
 }
 #nav-bar #compose-btn .icon .compose {
@@ -113,9 +113,9 @@ body {
 }
 
 .new-tweet {
-  border-radius: 6px;
-  padding: 10px;
-  margin-bottom: 20px;
+  border-radius: 0.375rem;
+  padding: 0.625rem;
+  margin-bottom: 1.25rem;
   background: #00ffff;
   background: -moz-linear-gradient(45deg, #00ffff 0%, #fc03ff 100%);
   background: -webkit-linear-gradient(45deg, #00ffff 0%, #fc03ff 100%);
@@ -126,9 +126,9 @@ body {
 }
 .new-tweet h2 {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .new-tweet form {
   display: flex;
@@ -137,19 +137,19 @@ body {
 }
 .new-tweet form .new-tweet__textarea {
   flex: 1 0 100%;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 6px;
+  margin-bottom: 0.625rem;
+  padding: 0.625rem;
+  border-radius: 0.375rem;
   border: none;
 }
 .new-tweet form input[type=submit] {
-  border-radius: 6px;
-  font-size: 10px;
+  border-radius: 0.375rem;
+  font-size: 0.625rem;
   color: #fff;
   text-transform: uppercase;
-  border: 2px solid #fff;
+  border: 0.125rem solid #fff;
   background: transparent;
-  padding: 5px 10px;
+  padding: 0.3125rem 0.625rem;
   transition: all 0.5s;
 }
 .new-tweet form input[type=submit]:hover {
@@ -158,9 +158,9 @@ body {
   cursor: pointer;
 }
 .new-tweet form .counter {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Roboto Mono", monospace;
-  letter-spacing: 1px;
+  letter-spacing: 0.0625rem;
   color: #fff;
   transition: color 0.5s;
 }
@@ -197,15 +197,15 @@ article.tweet:hover footer .tweet__media-controls {
 }
 article.tweet header {
   background-color: #525365;
-  border-radius: 4px 4px 0 0;
+  border-radius: 0.25rem 0.25rem 0 0;
   display: flex;
   align-items: center;
-  height: 80px;
-  padding: 0 10px;
+  height: 5rem;
+  padding: 0 0.625rem;
   transition: background-color 0.5s;
 }
 article.tweet header h2 {
-  margin-left: 10px;
+  margin-left: 0.625rem;
 }
 article.tweet header h4 {
   margin-left: auto;
@@ -213,24 +213,24 @@ article.tweet header h4 {
 }
 article.tweet header .tweet__avatar {
   margin: 0;
-  width: 60px;
-  height: 60px;
-  border-radius: 6px;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: 0.375rem;
   background-image: url("../images/default-avatar.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
 }
 article.tweet section {
-  padding: 20px;
+  padding: 1.25rem;
 }
 article.tweet section p {
   overflow-wrap: break-word;
   transition: color 0.5s;
 }
 article.tweet footer {
-  border-top: 2px solid #525365;
-  padding: 10px;
+  border-top: 0.125rem solid #525365;
+  padding: 0.625rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -248,9 +248,9 @@ article.tweet footer .tweet__media-controls {
   transition: opacity 0.5s;
 }
 article.tweet footer .tweet__media-controls a.icon {
-  margin: 0 0 0 10px;
-  width: 16px;
-  height: 16px;
+  margin: 0 0 0 0.625rem;
+  width: 1rem;
+  height: 1rem;
   transition: all 0.5s;
 }
 article.tweet footer .tweet__media-controls a.icon:hover {

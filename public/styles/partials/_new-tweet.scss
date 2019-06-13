@@ -1,7 +1,7 @@
 .new-tweet {
-  border-radius: 6px;
-  padding: 10px;
-  margin-bottom: 20px;
+  border-radius: 0.375rem;
+  padding: 0.625rem;
+  margin-bottom: 1.25rem;
   background: $gradient-1;
   background: -moz-linear-gradient(45deg,  $gradient-1 0%, $gradient-2 100%);
   background: -webkit-linear-gradient(45deg,  $gradient-1 0%,$gradient-2 100%);
@@ -12,9 +12,9 @@
 
   h2 {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
     color: $tweet-form-obvious;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   form {
@@ -24,20 +24,20 @@
 
     .new-tweet__textarea {
       flex: 1 0 100%;
-      margin-bottom: 10px;
-      padding: 10px;
-      border-radius: 6px;
+      margin-bottom: 0.625rem;
+      padding: 0.625rem;
+      border-radius: 0.375rem;
       border: none;
     }
 
     input[type=submit] {
-      border-radius: 6px;
-      font-size: 10px;
+      border-radius: 0.375rem;
+      font-size: 0.625rem;
       color: $tweet-form-obvious;
       text-transform: uppercase;
-      border: 2px solid $tweet-form-obvious;
+      border: 0.125rem solid $tweet-form-obvious;
       background: transparent;
-      padding: 5px 10px;
+      padding: 0.3125rem 0.625rem;
       transition: all $t-time;
 
       &:hover {
@@ -48,9 +48,9 @@
     }
 
     .counter {
-      font-size: 14px;
+      font-size: 0.875rem;
       font-family: 'Roboto Mono', monospace;
-      letter-spacing: 1px;
+      letter-spacing: 0.0625rem;
       color: $tweet-form-obvious;
       transition: color $t-time;
 
