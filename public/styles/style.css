@@ -173,6 +173,7 @@ article.tweet {
   border: 2px solid #525365;
   transition: all 0.5s;
   margin-bottom: 10px;
+  cursor: pointer;
 }
 article.tweet:hover {
   border-color: #fff;

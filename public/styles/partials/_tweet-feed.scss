@@ -3,6 +3,7 @@ article.tweet {
   border: 2px solid $tweet-subtle;
   transition: all $t-time;
   margin-bottom: 10px;
+  cursor: pointer;
 
   &:hover {
     border-color: $tweet-obvious;
