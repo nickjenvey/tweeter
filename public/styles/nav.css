@@ -11,7 +11,7 @@
   align-items: center;
   z-index: 100;
   -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,.25);
-box-shadow: 0 0 5px 2px rgba(0,0,0,.25);
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.25);
 }
 
 #nav-bar .logo {
