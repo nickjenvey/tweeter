@@ -1,0 +1,32 @@
+/* Font Variables */
+$body-font: 'Raleway', sans-serif;
+$err-font: 'Roboto Mono', monospace;
+
+/* Colour Variables */
+$err-danger: #cf002a;
+$err-warning: #ffa900;
+
+$highlight: #fc03ff;
+
+$dark: #3c3d51;
+$darker: #292d3e;
+$darkest: #1b1e32;
+
+$nav-subtle: #e3e3e3;
+$nav-obvious: #fff;
+
+$tweet-subtle: #525365;
+$tweet-obvious: $nav-obvious;
+
+$icon: #00ffff;
+$flag: $err-warning;
+$retweet: #7c48b0;
+$heart: $err-danger;
+
+$gradient-1: $icon;
+$gradient-2: $highlight;
+
+$tweet-form-obvious: $nav-obvious;
+
+/* Transition Times */
+$t-time: .5s

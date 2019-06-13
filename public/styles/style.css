@@ -1,0 +1,272 @@
+/* Font Variables */
+/* Colour Variables */
+/* Transition Times */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+body {
+  margin: 0;
+  color: #86879c;
+  background-color: #292d3e;
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  width: 450px;
+  margin: 80px auto 0;
+  background-color: #3c3d51;
+  padding: 3em 2em;
+}
+.container .error {
+  border-radius: 6px;
+  text-align: center;
+  border-width: 2px;
+  border-style: solid;
+  margin-bottom: 10px;
+}
+.container .error .err {
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 2px;
+}
+.container .error.error--blank-form {
+  border-color: #cf002a;
+  background-color: rgba(207, 0, 42, 0.15);
+  color: #cf002a;
+  display: none;
+}
+.container .error.error--too-long {
+  border-color: #ffa900;
+  background-color: rgba(255, 169, 0, 0.15);
+  color: #ffa900;
+  display: none;
+}
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background-color: #1b1e32;
+  color: #e3e3e3;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.25);
+}
+#nav-bar .logo {
+  width: 80px;
+  height: 80px;
+}
+#nav-bar .header {
+  font-size: 32px;
+  margin-left: 10px;
+  text-transform: lowercase;
+}
+#nav-bar #compose-btn {
+  margin-left: auto;
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid #e3e3e3;
+  border-radius: 6px;
+  color: #e3e3e3;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+#nav-bar #compose-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #fc03ff;
+  transform: scale(1.1);
+  -webkit-box-shadow: 0 6px 5px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 5px 5px rgba(0, 0, 0, 0.25);
+}
+#nav-bar #compose-btn:active, #nav-bar #compose-btn:focus {
+  outline: 0;
+}
+#nav-bar #compose-btn:hover .icon .compose {
+  fill: #fc03ff;
+}
+#nav-bar #compose-btn .icon {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  margin-right: 10px;
+  fill: #e3e3e3;
+}
+#nav-bar #compose-btn .icon .compose {
+  fill: #fff;
+  transition: fill 0.5s;
+}
+
+.new-tweet {
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: #00ffff;
+  background: -moz-linear-gradient(45deg, #00ffff 0%, #fc03ff 100%);
+  background: -webkit-linear-gradient(45deg, #00ffff 0%, #fc03ff 100%);
+  background: linear-gradient(45deg, #00ffff 0%, #fc03ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="$gradient-1", endColorstr="$gradient-2",GradientType=1 );
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
+}
+.new-tweet h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 20px;
+}
+.new-tweet form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.new-tweet form .new-tweet__textarea {
+  flex: 1 0 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+.new-tweet form input[type=submit] {
+  border-radius: 6px;
+  font-size: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  border: 2px solid #fff;
+  background: transparent;
+  padding: 5px 10px;
+  transition: all 0.5s;
+}
+.new-tweet form input[type=submit]:hover {
+  background: #fff;
+  color: #fc03ff;
+  cursor: pointer;
+}
+.new-tweet form .counter {
+  font-size: 14px;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: color 0.5s;
+}
+.new-tweet form .counter.counter--negative {
+  color: #ffa900;
+}
+
+article.tweet {
+  border-radius: 6px;
+  border: 2px solid #525365;
+  transition: all 0.5s;
+  margin-bottom: 10px;
+}
+article.tweet:hover {
+  border-color: #fff;
+}
+article.tweet:hover header {
+  background-color: #fff;
+}
+article.tweet:hover header h2, article.tweet:hover header h4 {
+  color: #1b1e32;
+}
+article.tweet:hover section p {
+  color: #fff;
+}
+article.tweet:hover footer {
+  border-top: 2px solid #fff;
+}
+article.tweet:hover footer h6 {
+  color: #fff;
+}
+article.tweet:hover footer .tweet__media-controls {
+  opacity: 1;
+}
+article.tweet header {
+  background-color: #525365;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 0 10px;
+  transition: background-color 0.5s;
+}
+article.tweet header h2 {
+  margin-left: 10px;
+}
+article.tweet header h4 {
+  margin-left: auto;
+  font-weight: 300;
+}
+article.tweet header .tweet__avatar {
+  margin: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  background-image: url("../images/default-avatar.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+article.tweet section {
+  padding: 20px;
+}
+article.tweet section p {
+  overflow-wrap: break-word;
+  transition: color 0.5s;
+}
+article.tweet footer {
+  border-top: 2px solid #525365;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border 0.5s;
+}
+article.tweet footer h6 {
+  margin: 0;
+  font-weight: 300;
+  transition: color 0.5s;
+}
+article.tweet footer .tweet__media-controls {
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+article.tweet footer .tweet__media-controls a.icon {
+  margin: 0 0 0 10px;
+  width: 16px;
+  height: 16px;
+  transition: all 0.5s;
+}
+article.tweet footer .tweet__media-controls a.icon:hover {
+  transform: scale(1.25);
+}
+article.tweet footer .tweet__media-controls a.icon .flag, article.tweet footer .tweet__media-controls a.icon .retweet, article.tweet footer .tweet__media-controls a.icon .heart {
+  fill: #00ffff;
+}
+article.tweet footer .tweet__media-controls a.icon:hover .flag {
+  fill: #ffa900;
+}
+article.tweet footer .tweet__media-controls a.icon:hover .retweet {
+  fill: #7c48b0;
+}
+article.tweet footer .tweet__media-controls a.icon:hover .heart {
+  fill: #cf002a;
+}
+
+/*# sourceMappingURL=style.css.map */

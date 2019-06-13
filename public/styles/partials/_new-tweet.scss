@@ -1,0 +1,62 @@
+.new-tweet {
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: $gradient-1;
+  background: -moz-linear-gradient(45deg,  $gradient-1 0%, $gradient-2 100%);
+  background: -webkit-linear-gradient(45deg,  $gradient-1 0%,$gradient-2 100%);
+  background: linear-gradient(45deg,  $gradient-1 0%,$gradient-2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-1', endColorstr='$gradient-2',GradientType=1 );
+  -webkit-box-shadow: 0 4px 6px 0 rgba(0,0,0,.25);
+  box-shadow: 0 4px 6px 0 rgba(0,0,0,.25);
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: $tweet-form-obvious;
+    font-size: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .new-tweet__textarea {
+      flex: 1 0 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    input[type=submit] {
+      border-radius: 6px;
+      font-size: 10px;
+      color: $tweet-form-obvious;
+      text-transform: uppercase;
+      border: 2px solid $tweet-form-obvious;
+      background: transparent;
+      padding: 5px 10px;
+      transition: all $t-time;
+
+      &:hover {
+        background: $tweet-form-obvious;
+        color: $gradient-2;
+        cursor: pointer;
+      }
+    }
+
+    .counter {
+      font-size: 14px;
+      font-family: 'Roboto Mono', monospace;
+      letter-spacing: 1px;
+      color: $tweet-form-obvious;
+      transition: color $t-time;
+
+      &.counter--negative {
+        color: $err-warning;
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+#nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  background: {
+    color: $darkest;
+  }
+  color: $nav-subtle;
+  padding: 0 2em;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  -webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,.25);
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.25);
+
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .header {
+    font-size: 32px;
+    margin-left: 10px;
+    text-transform: lowercase;
+  }
+
+  #compose-btn {
+    margin-left: auto;
+    -webkit-appearance: none;
+    background: {
+      color: transparent;
+    }
+    border: 2px solid $nav-subtle;
+    border-radius: 6px;
+    color: $nav-subtle;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all $t-time;
+    text-transform: uppercase;
+    font-size: 12px;
+
+    &:hover {
+      background: {
+        color: $nav-obvious;
+      }
+      border-color: $nav-obvious;
+      color: $highlight;
+      transform: scale(1.1);
+      -webkit-box-shadow: 0 6px 5px 5px rgba(0,0,0,.25);
+      box-shadow: 0 6px 5px 5px rgba(0,0,0,.25);
+    }
+
+    &:active, &:focus {
+      outline: 0;
+    }
+
+    &:hover .icon .compose {
+      fill: $highlight;
+    }
+
+    .icon {
+      width: 12px;
+      height: 12px;
+      display: inline-block;
+      margin-right: 10px;
+      fill: $nav-subtle;
+      
+      .compose {
+        fill: $nav-obvious;
+        transition: fill $t-time;
+      }
+    }
+  }
+}
