@@ -5,6 +5,10 @@ article.tweet {
   margin-bottom: 10px;
   cursor: pointer;
 
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
   &:hover {
     border-color: $tweet-obvious;
   }

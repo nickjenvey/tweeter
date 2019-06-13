@@ -23,7 +23,7 @@ body {
   width: 28.125rem;
   margin: 5rem auto;
   background-color: #3c3d51;
-  padding: 3rem 2rem;
+  padding: 3rem 2rem 2rem;
   border-radius: 0 0 6px 6px;
 }
 .container .error {
@@ -224,6 +224,9 @@ article.tweet {
   transition: all 0.5s;
   margin-bottom: 10px;
   cursor: pointer;
+}
+article.tweet:last-of-type {
+  margin-bottom: 0;
 }
 article.tweet:hover {
   border-color: #fff;
