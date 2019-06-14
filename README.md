@@ -1,7 +1,9 @@
 # Tweeter Project
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+This project is used to help Lighthouse Lab students practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+
+I have added and changed a lot from the original fork, including: Design (Full SCSS refactor, logo, default tweets, and even a animated rainbow background), Code structure (SCSS refactor, tweet output, new routes and functions), and Functionality (Post new tweets, hide/show compose feild, database storage, "like" button functionality).
 
 ## Screenshots
 !["Desktop View"](https://github.com/nickjenvey/tweeter/blob/master/public/docs/desktop.png)
