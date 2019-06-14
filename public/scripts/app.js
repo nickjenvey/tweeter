@@ -47,7 +47,7 @@ $(document).ready(function() {
   };
 
   const renderTweets = (tweets) => {
-    let tweetArr = []
+    let tweetArr = [];
     for (const key in tweets) {
       tweetArr.push(createTweetElement(tweets[key]));
     }
