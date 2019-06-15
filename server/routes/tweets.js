@@ -44,6 +44,7 @@ module.exports = function(DataHelpers) {
 
   tweetsRoutes.post("/:id/likes", function(req, res) {
     DataHelpers.updateLikes(req.params.id, (err, tweet) => {
+      console.log(tweet);
       res.status(201).json({ likes: tweet[0].likes });
     });
   });

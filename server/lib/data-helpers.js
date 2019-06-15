@@ -1,5 +1,7 @@
 "use strict";
 
+const {ObjectId} = require("mongodb");
+
 // Defines helper functions for saving and getting tweets, using the database `db`
 module.exports = function makeDataHelpers(db) {
   return {
@@ -17,8 +19,9 @@ module.exports = function makeDataHelpers(db) {
 
     // Increment the like value when someone clicks the like button
     updateLikes: function(id, callback) {
-      db.collection("tweets").update( { _id: id }, { $inc: { likes: 1 } } );
-      db.collection("tweets").find( { _id: id } ).toArray(callback);
+      console.log(id);
+      db.collection("tweets").update( { _id: ObjectId(id) }, { $inc: { likes: 1 } } );
+      db.collection("tweets").find( { _id: ObjectId(id) } ).toArray(callback);
     }
 
   };
